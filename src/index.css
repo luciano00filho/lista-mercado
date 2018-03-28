@@ -1,0 +1,95 @@
+html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+body { background-color: #000; color:#FFF; }
+
+/* spacing */
+label, button {
+	margin-left: 10px; 
+}
+
+label {
+	width: 30px;
+}
+
+input[type=text]{
+	width: 80%;
+	margin: 10px;	
+}
+
+table {
+  background-color: #ff33cc;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+}
+
+/* typography */
+thead th {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+/* caption */
+caption {
+  font-family: 'Rock Salt', cursive;
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  color: #666;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+/* colors */
+thead, tfoot {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+thead th, tfoot th, tfoot td {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  border: 3px solid purple;
+}
+
+/* zebra styling */
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
