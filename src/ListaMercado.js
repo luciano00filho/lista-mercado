@@ -20,7 +20,11 @@ export class ListaMercado extends React.Component {
   }
 
   handleChangeValor(e) {
-    this.setState({ vl: e.target.value });
+    let v = e.target.value;
+    if(v.indexOf(',') >= 0){
+    	v = v.replace(',','.');
+    }		
+    this.setState({ vl: v });
   }
 
   handleSubmit(e) {
