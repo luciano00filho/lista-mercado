@@ -1,6 +1,16 @@
 import React from 'react';
 
 export class ItensListaMercado extends React.Component {
+  calcTotal(){
+    let t = '';
+    for (t in this.props.items){
+	console.log(t);    	
+	//console.log(t.total);
+        //res += t.total;
+        //console.log(res);
+    }
+  }  
+
   render() {
     return (
       <table>
@@ -23,6 +33,9 @@ export class ItensListaMercado extends React.Component {
 	          </tr>	
 	        ))}
 	    </tbody>
+	    <tfoot>
+	        <tr><th colSpan="3">Total</th><th>{this.calcTotal}</th></tr>
+	    </tfoot>
 	  </table>    
     );
   }
