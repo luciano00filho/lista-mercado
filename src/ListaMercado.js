@@ -4,7 +4,7 @@ import {ItensListaMercado} from './ItensListaMercado.js';
 export class ListaMercado extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { items: [], total: 0, nome: '', qtd: '', vl: '' };
+    this.state = { items: [], total: [], nome: '', qtd: '', vl: '' };
     this.handleChangeNome = this.handleChangeNome.bind(this);
     this.handleChangeQtd = this.handleChangeQtd.bind(this);
     this.handleChangeValor = this.handleChangeValor.bind(this);
@@ -44,7 +44,7 @@ export class ListaMercado extends React.Component {
 
     this.setState(prevState => ({
       items: prevState.items.concat(newItem),
-      total: 0,
+      total: prevState.total.concat(newItem.total),
       nome: '',
       qtd: '',
       vl: ''
@@ -54,7 +54,7 @@ export class ListaMercado extends React.Component {
   render() {
     return (
       <div>
-        <ItensListaMercado items={this.state.items} />
+        <ItensListaMercado items={this.state.items} valores={this.state.total} />
         
         <form onSubmit={this.handleSubmit}>
           <p>

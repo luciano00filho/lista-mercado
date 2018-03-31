@@ -2,7 +2,16 @@ import React from 'react';
 
 export class ItensListaMercado extends React.Component {
   render() {
-    return (
+     const tfooter = (this.props.valores.length >= 1) ? (
+		<tfoot>
+		    <tr>
+            	        <th colSpan="3">Total</th>
+                        <th>{this.props.valores.reduce((prev, curr) => prev + curr)}</th>
+          	    </tr>
+	        </tfoot>
+	    ) : '';
+     
+     return (
       <table>
       	<caption>Lista de mercado</caption>
       	<thead>
@@ -23,12 +32,7 @@ export class ItensListaMercado extends React.Component {
 	          </tr>	
 	        ))}
 	    </tbody>
-	    <tfoot>
-	        <tr>
-            <th colSpan="3">Total</th>
-            <th></th>
-          </tr>
-	    </tfoot>
+	    {tfooter}
 	  </table>    
     );
   }
